@@ -1,8 +1,8 @@
 package routes
 
 import (
-	controller "golang-restaurant-management/controllers"
-	"golang-restaurant-management/middleware"
+	controller "mora-Backend/controllers"
+	"mora-Backend/middleware"
 
 	"github.com/gin-gonic/gin"
 )

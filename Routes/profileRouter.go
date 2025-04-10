@@ -1,14 +1,14 @@
 package routes
 
 import (
-	controller "golang-restaurant-management/controllers"
-	"golang-restaurant-management/middleware"
+	controller "mora-Backend/controllers"
+	"mora-Backend/middleware"
 	
 	"github.com/gin-gonic/gin"
 )
 
 func ProfileRoutes(incomingRoutes *gin.Engine) {
-	incomingRoutes.POST("/profiles/signup", controller.SignUP())
+	incomingRoutes.POST("/profiles/signup", controller.SignUp())
 	incomingRoutes.POST("/profiles/login", controller.Login())
 	incomingRoutes.POST("/profiles/logout", middleware.AuthMiddleware(), controller.Logout())
 	incomingRoutes.GET("/profiles/", middleware.AuthMiddleware(), controller.GetProfiles())
